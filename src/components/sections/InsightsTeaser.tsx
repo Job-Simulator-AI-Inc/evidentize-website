@@ -35,7 +35,7 @@ export default function InsightsTeaser() {
               heading="Thinking on capability, evidence and the future of hiring."
               lead="Articles, whitepapers and guides for partners, educators and talent leaders."
             />
-            <Button href="/insights" variant="ghost" arrow>
+            <Button href="/insights" variant="primary" arrow>
               All insights
             </Button>
           </div>

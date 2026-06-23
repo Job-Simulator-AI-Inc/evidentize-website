@@ -42,7 +42,7 @@ export default function GalleryTeaser() {
               heading="See it in motion."
               lead="Photos, walkthroughs and moments from events — the platform and the people building on it."
             />
-            <Button href="/gallery" variant="ghost" arrow>
+            <Button href="/gallery" variant="primary" arrow>
               View all
             </Button>
           </div>
