@@ -22,7 +22,7 @@ const ANATOMY_ITEMS = [
 
 export default function RecordAnatomy() {
   return (
-    <section className="record-showcase-section">
+    <section id="credentials" className="record-showcase-section">
       <div className="wrap">
         <RevealWrapper>
           <div className="record-showcase-grid">

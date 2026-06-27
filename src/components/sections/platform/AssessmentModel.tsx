@@ -39,7 +39,7 @@ const FACTS = [
 
 export default function AssessmentModel() {
   return (
-    <section className="platform-model-section section-pad">
+    <section id="simulations" className="platform-model-section section-pad">
       <div className="wrap">
         <RevealWrapper>
           <SectionHead

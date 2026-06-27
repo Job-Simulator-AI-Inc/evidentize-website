@@ -46,7 +46,7 @@
   --t-eyebrow: 0.73rem;
 
   /* Layout */
-  --maxw: 1180px;
+  /* --maxw: 1180px; */
   --gutter: clamp(20px, 5vw, 64px);
   --radius: 14px;
   --radius-sm: 9px;
@@ -130,7 +130,7 @@ p { line-height: 1.65; }
    LAYOUT PRIMITIVES
 ═══════════════════════════════════════════════════ */
 .wrap {
-  max-width: var(--maxw);
+  /* max-width: var(--maxw); */
   /* margin-inline: auto; */
   padding-inline: var(--gutter);
 }
@@ -2525,7 +2525,9 @@ section { position: relative; }
     justify-content: flex-start;
   }
   .hero-watermark {
-    display: none;
+    font-size: clamp(52px, 14vw, 80px);
+    right: 1%;
+    bottom: 5%;
   }
   /* ── Eco-index hidden at ≤860px: swipe carousel shown instead ── */
   .eco-index { display: none; }
@@ -2545,6 +2547,12 @@ section { position: relative; }
 }
 
 @media (max-width: 560px) {
+  .hero-watermark {
+    font-size: clamp(40px, 12vw, 52px);
+    right: 0;
+    bottom: 3%;
+    color: rgba(255,255,255,0.03);
+  }
   .how-timeline {
     padding-left: 48px;
   }
@@ -4742,30 +4750,21 @@ section { position: relative; }
   line-height: 1.5;
 }
 
-/* Mobile: vertical pipeline */
+/* Mobile: vertical timeline — overrides below in the PIPELINE section */
 @media (max-width: 768px) {
   .pipeline-diagram {
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 68px;
   }
   .pipeline-col {
     align-items: flex-start;
     text-align: left;
     width: 100%;
-    padding: 0 0 32px 0;
     position: relative;
-  }
-  .pipeline-node {
-    position: absolute;
-    left: -62px;
-    top: 0;
   }
   .pipeline-col:not(:last-child)::after {
     content: '';
     position: absolute;
-    left: -36px;
-    top: 52px;
     bottom: 0;
     width: 1px;
     background: var(--edge-dark);
@@ -5193,6 +5192,7 @@ section { position: relative; }
 .pipeline-conn { margin-top: 35px !important; }
 
 @media (max-width: 768px) {
+  .pipeline-diagram { padding-left: 0; }
   .pipeline-node { position: relative !important; inset: auto !important; width: 72px !important; height: 72px !important; }
   .pipeline-node-wrap { flex-shrink: 0; }
   .pipeline-col {
@@ -5200,8 +5200,9 @@ section { position: relative; }
     align-items: flex-start !important;
     text-align: left !important;
     gap: 16px !important;
-    padding: 0 0 28px !important;
+    padding: 0 0 32px !important;
   }
+  .pipeline-col:last-child { padding-bottom: 0 !important; }
   .pipeline-col:not(:last-child)::after { left: 35px !important; top: 72px !important; }
   .pipeline-step-title,
   .pipeline-step-desc { text-align: left !important; }
@@ -5283,6 +5284,30 @@ section { position: relative; }
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.demo-form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 32px;
+  background: color-mix(in srgb, var(--verified) 6%, #fff);
+  border: 1px solid color-mix(in srgb, var(--verified) 24%, transparent);
+  border-radius: var(--radius);
+}
+
+.demo-form-success-title {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.demo-form-success-body {
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
 }
 
 .demo-field {
@@ -5564,6 +5589,39 @@ section { position: relative; }
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.contact-form-error {
+  font-size: 0.875rem;
+  color: var(--band-fail);
+  padding: 10px 14px;
+  background: color-mix(in srgb, var(--band-fail) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--band-fail) 24%, transparent);
+  border-radius: var(--radius-sm);
+}
+
+.contact-form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 32px;
+  background: color-mix(in srgb, var(--verified) 6%, var(--paper-2));
+  border: 1px solid color-mix(in srgb, var(--verified) 24%, transparent);
+  border-radius: var(--radius);
+}
+
+.contact-form-success-title {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.contact-form-success-body {
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
 }
 
 @media (max-width: 820px) {

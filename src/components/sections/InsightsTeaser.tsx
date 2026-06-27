@@ -2,27 +2,14 @@ import Link from 'next/link'
 import RevealWrapper from '@/components/ui/RevealWrapper'
 import SectionHead from '@/components/ui/SectionHead'
 import Button from '@/components/ui/Button'
+import { ARTICLES } from '@/data/articleData'
 
-const RESOURCES = [
-  {
-    type: 'Whitepaper',
-    title: 'The evidence gap in hiring',
-    desc: 'Why claims-based assessment fails, and what a verifiable alternative looks like.',
-    href: '/insights/the-evidence-gap-in-hiring',
-  },
-  {
-    type: 'Article',
-    title: 'Completion is not capability',
-    desc: 'How training providers can evidence outcomes, not attendance.',
-    href: '/insights/completion-is-not-capability',
-  },
-  {
-    type: 'Guide',
-    title: 'Building on the evidence layer',
-    desc: 'A practical guide for partners launching a branded capability offering.',
-    href: '/insights/building-on-the-evidence-layer',
-  },
-]
+const RESOURCES = ARTICLES.slice(0, 3).map((a) => ({
+  type: a.category,
+  title: a.title,
+  desc: a.excerpt,
+  href: `/insights/${a.slug}`,
+}))
 
 export default function InsightsTeaser() {
   return (

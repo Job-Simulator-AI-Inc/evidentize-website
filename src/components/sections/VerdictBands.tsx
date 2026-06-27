@@ -41,7 +41,7 @@ const BANDS = [
 
 export default function VerdictBands() {
   return (
-    <section className="verdict-section on-ink section-pad">
+    <section id="verification" className="verdict-section on-ink section-pad">
       <div className="wrap">
         <RevealWrapper>
           <SectionHead

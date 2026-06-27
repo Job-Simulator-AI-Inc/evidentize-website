@@ -142,7 +142,7 @@ export default function Ecosystem() {
   }, [])
 
   return (
-    <section className="ecosystem-section section-pad">
+    <section id="ecosystem" className="ecosystem-section section-pad">
       <div className="wrap">
         <RevealWrapper>
           <SectionHead

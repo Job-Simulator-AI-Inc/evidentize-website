@@ -1,4 +1,5 @@
 import RevealWrapper from '@/components/ui/RevealWrapper'
+import ContactForm from '@/components/ContactForm'
 
 const CHANNELS = [
   {
@@ -92,28 +93,7 @@ export default function ContactPage() {
             </RevealWrapper>
 
             <RevealWrapper delay={150}>
-              <form className="contact-form" action="#" method="POST" noValidate>
-                <div className="demo-field">
-                  <label className="demo-label" htmlFor="ct-name">Your name</label>
-                  <input className="demo-input" id="ct-name" type="text" name="name" placeholder="Alex Johnson" required />
-                </div>
-                <div className="demo-field">
-                  <label className="demo-label" htmlFor="ct-email">Email address</label>
-                  <input className="demo-input" id="ct-email" type="email" name="email" placeholder="you@organisation.com" required />
-                </div>
-                <div className="demo-field">
-                  <label className="demo-label" htmlFor="ct-subject">Subject</label>
-                  <input className="demo-input" id="ct-subject" type="text" name="subject" placeholder="What's this about?" required />
-                </div>
-                <div className="demo-field">
-                  <label className="demo-label" htmlFor="ct-message">Message</label>
-                  <textarea className="demo-textarea" id="ct-message" name="message" rows={5} placeholder="Tell us what you're thinking…" required />
-                </div>
-                <button type="submit" className="demo-submit btn btn-primary">
-                  Send message
-                  <span className="arrow" aria-hidden="true">→</span>
-                </button>
-              </form>
+              <ContactForm />
             </RevealWrapper>
           </div>
         </div>

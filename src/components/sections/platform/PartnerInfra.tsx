@@ -101,7 +101,7 @@ const INFRA_ITEMS = [
 
 export default function PartnerInfra() {
   return (
-    <section className="infra-section section-pad">
+    <section id="white-label" className="infra-section section-pad">
       <div className="wrap">
         <RevealWrapper>
           <SectionHead

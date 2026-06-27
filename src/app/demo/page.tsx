@@ -1,5 +1,6 @@
 import RevealWrapper from '@/components/ui/RevealWrapper'
 import EvidenceRecord from '@/components/EvidenceRecord'
+import DemoForm from '@/components/DemoForm'
 
 const PROOF_POINTS = [
   'A live assessment scenario from a discipline of your choice',
@@ -64,73 +65,7 @@ export default function DemoPage() {
                   <p className="demo-form-sub">We respond within one business day.</p>
                 </div>
 
-                <form className="demo-form" action="#" method="POST" noValidate>
-                  <div className="demo-field">
-                    <label className="demo-label" htmlFor="demo-name">Your name</label>
-                    <input
-                      className="demo-input"
-                      id="demo-name"
-                      type="text"
-                      name="name"
-                      placeholder="Alex Johnson"
-                      autoComplete="name"
-                      required
-                    />
-                  </div>
-
-                  <div className="demo-field">
-                    <label className="demo-label" htmlFor="demo-org">Organisation</label>
-                    <input
-                      className="demo-input"
-                      id="demo-org"
-                      type="text"
-                      name="organisation"
-                      placeholder="University / Training provider / Company"
-                      required
-                    />
-                  </div>
-
-                  <div className="demo-field">
-                    <label className="demo-label" htmlFor="demo-role">Your role</label>
-                    <input
-                      className="demo-input"
-                      id="demo-role"
-                      type="text"
-                      name="role"
-                      placeholder="Head of L&D, Founder, Talent Director…"
-                      required
-                    />
-                  </div>
-
-                  <div className="demo-field">
-                    <label className="demo-label" htmlFor="demo-email">Work email</label>
-                    <input
-                      className="demo-input"
-                      id="demo-email"
-                      type="email"
-                      name="email"
-                      placeholder="you@organisation.com"
-                      autoComplete="email"
-                      required
-                    />
-                  </div>
-
-                  <div className="demo-field">
-                    <label className="demo-label" htmlFor="demo-problem">What are you trying to solve?</label>
-                    <textarea
-                      className="demo-textarea"
-                      id="demo-problem"
-                      name="problem"
-                      rows={4}
-                      placeholder="Tell us about your current challenge — assessment, hiring, credentialing…"
-                    />
-                  </div>
-
-                  <button type="submit" className="demo-submit btn btn-primary">
-                    Request a demo
-                    <span className="arrow" aria-hidden="true">→</span>
-                  </button>
-                </form>
+                <DemoForm />
               </div>
             </RevealWrapper>
           </div>

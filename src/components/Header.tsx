@@ -187,12 +187,13 @@ export default function Header() {
             <NavDropdown label="Resources" items={RESOURCES} />
             <NavDropdown label="Company" items={COMPANY} />
             <Link href="/investors" className="nav-link">Investors</Link>
+            <Link href="/contact" className="nav-link">Contact</Link>
           </nav>
 
           {/* Desktop CTAs */}
           <div className="header-ctas">
             <a
-              href="https://career-bridge-foundation-project.vercel.app/"
+              href="https://app.evidentize.io/auth/login"
               className="sign-in-link"
               target="_blank"
               rel="noopener noreferrer"
@@ -314,6 +315,13 @@ export default function Header() {
           <div className="mobile-nav-group">
             <Link href="/investors" className="mobile-nav-plain" onClick={closeMobile}>
               Investors
+            </Link>
+          </div>
+
+          {/* Contact */}
+          <div className="mobile-nav-group">
+            <Link href="/contact" className="mobile-nav-plain" onClick={closeMobile}>
+              Contact
             </Link>
           </div>
 
