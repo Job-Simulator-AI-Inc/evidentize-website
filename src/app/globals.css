@@ -3431,6 +3431,161 @@ section { position: relative; }
   padding: 3px 8px;
 }
 
+/* Career listing cards */
+.careers-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.career-card {
+  padding: clamp(28px, 4vw, 40px) 0;
+  border-bottom: 1px solid var(--edge);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.career-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.career-card-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.career-card-title {
+  font-family: var(--display);
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  flex: 1 1 auto;
+}
+
+.career-card-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding-top: 3px;
+}
+
+.career-card-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8125rem;
+  color: var(--ink-mute);
+}
+
+.career-card-desc {
+  font-size: var(--t-lead);
+  color: var(--ink-soft);
+  line-height: 1.65;
+  max-width: 680px;
+}
+
+.career-card-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.career-card-section-label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+.career-card-responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.career-card-responsibilities li {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  padding-left: 16px;
+  position: relative;
+}
+
+.career-card-responsibilities li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--ink-mute);
+}
+
+.career-card-skills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.career-skill-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--verified);
+  background: color-mix(in srgb, var(--verified) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--verified) 20%, transparent);
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+
+.career-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.career-card-salary {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.career-card-salary-value {
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.career-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--verified);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, gap 0.18s;
+  white-space: nowrap;
+}
+
+.career-apply-btn:hover {
+  background: var(--verified-bri);
+  gap: 12px;
+}
+
 /* ═══════════════════════════════════════════════════
    MENTOR REQUIREMENTS
 ═══════════════════════════════════════════════════ */
@@ -5376,9 +5531,6 @@ section { position: relative; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: var(--edge-dark);
-  border: 1px solid var(--edge-dark);
-  border-radius: 2px;
   overflow: hidden;
 }
 

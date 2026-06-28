@@ -10,6 +10,40 @@ export const metadata: Metadata = {
     'Evidentize is an early-stage company building the infrastructure for verified human capability. If you want to work on a genuine infrastructure problem, talk to us.',
 }
 
+type JobListing = {
+  id: string
+  title: string
+  department: string
+  type: 'Full-time' | 'Part-time' | 'Contract' | 'Remote'
+  location: string
+  description: string
+  responsibilities: string[]
+  skills: string[]
+  salaryRange: string
+  applyEmail?: string
+}
+
+const JOB_LISTINGS: JobListing[] = [
+  // Add job listings here. When this array is empty the "no roles" state renders.
+  // Example shape:
+  // {
+  //   id: 'founding-engineer',
+  //   title: 'Founding Engineer',
+  //   department: 'Engineering',
+  //   type: 'Full-time',
+  //   location: 'Remote (UK / EU)',
+  //   description: 'You will be one of the first engineers at Evidentize, working directly with the founders to build the core assessment infrastructure from the ground up.',
+  //   responsibilities: [
+  //     'Design and ship the assessment delivery and scoring pipeline',
+  //     'Define data models and API contracts for evidence issuance',
+  //     'Own reliability and performance of the platform end-to-end',
+  //   ],
+  //   skills: ['TypeScript', 'Node.js', 'PostgreSQL', 'System Design'],
+  //   salaryRange: '£70,000 – £90,000',
+  //   applyEmail: 'careers@evidentize.io',
+  // },
+]
+
 const WHAT_WE_VALUE = [
   {
     num: '01',
@@ -69,12 +103,72 @@ export default function CareersPage() {
 
           <RevealWrapper delay={80}>
             <div className="careers-openings">
-              <div className="careers-empty">
-                <span className="careers-empty-label">No roles currently listed</span>
-                <p className="careers-empty-text">
-                  We are not currently advertising specific roles — but we are always interested in talking to people who believe in the problem and want to work on it. If that is you, get in touch.
-                </p>
-              </div>
+              {JOB_LISTINGS.length === 0 ? (
+                <div className="careers-empty">
+                  <span className="careers-empty-label">No roles currently listed</span>
+                  <p className="careers-empty-text">
+                    We are not currently advertising specific roles — but we are always interested in talking to people who believe in the problem and want to work on it. If that is you, get in touch.
+                  </p>
+                </div>
+              ) : (
+                <div className="careers-list">
+                  {JOB_LISTINGS.map((job) => (
+                    <article key={job.id} className="career-card">
+                      <header className="career-card-header">
+                        <div className="career-card-title-row">
+                          <h3 className="career-card-title">{job.title}</h3>
+                          <div className="career-card-badges">
+                            <span className="opening-tag">{job.type}</span>
+                            <span className="opening-tag">{job.department}</span>
+                          </div>
+                        </div>
+                        <p className="career-card-location">
+                          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M8 1.5A4.5 4.5 0 0 0 3.5 6c0 3.5 4.5 8.5 4.5 8.5S12.5 9.5 12.5 6A4.5 4.5 0 0 0 8 1.5Zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="currentColor"/>
+                          </svg>
+                          {job.location}
+                        </p>
+                      </header>
+
+                      <p className="career-card-desc">{job.description}</p>
+
+                      <div className="career-card-section">
+                        <span className="career-card-section-label">Responsibilities</span>
+                        <ul className="career-card-responsibilities">
+                          {job.responsibilities.map((r) => (
+                            <li key={r}>{r}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="career-card-section">
+                        <span className="career-card-section-label">Skills & experience</span>
+                        <div className="career-card-skills">
+                          {job.skills.map((s) => (
+                            <span key={s} className="career-skill-tag">{s}</span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <footer className="career-card-footer">
+                        <div className="career-card-salary">
+                          <span className="career-card-section-label">Salary</span>
+                          <span className="career-card-salary-value">{job.salaryRange}</span>
+                        </div>
+                        <a
+                          href={`mailto:${job.applyEmail ?? 'careers@evidentize.io'}?subject=Application — ${job.title}`}
+                          className="career-apply-btn"
+                        >
+                          Apply for this role
+                          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </a>
+                      </footer>
+                    </article>
+                  ))}
+                </div>
+              )}
             </div>
           </RevealWrapper>
         </div>
