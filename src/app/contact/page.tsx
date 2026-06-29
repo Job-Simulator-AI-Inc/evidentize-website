@@ -2,20 +2,20 @@ import RevealWrapper from '@/components/ui/RevealWrapper'
 import ContactForm from '@/components/ContactForm'
 
 const CHANNELS = [
+  // {
+  //   num: '01',
+  //   label: 'Partner enquiries',
+  //   desc: 'Universities, training providers, coaching organisations and employers looking to integrate verified assessment.',
+  //   email: 'partners@evidentize.io',
+  // },
+  // {
+  //   num: '02',
+  //   label: 'Press & media',
+  //   desc: 'Coverage requests, background briefings, interviews and media packs.',
+  //   email: 'press@evidentize.io',
+  // },
   {
     num: '01',
-    label: 'Partner enquiries',
-    desc: 'Universities, training providers, coaching organisations and employers looking to integrate verified assessment.',
-    email: 'partners@evidentize.io',
-  },
-  {
-    num: '02',
-    label: 'Press & media',
-    desc: 'Coverage requests, background briefings, interviews and media packs.',
-    email: 'press@evidentize.io',
-  },
-  {
-    num: '03',
     label: 'General',
     desc: 'Anything else. We read every email and respond within one business day.',
     email: 'hello@evidentize.io',

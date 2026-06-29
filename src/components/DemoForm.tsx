@@ -58,7 +58,7 @@ export default function DemoForm() {
         </p>
         <button
           type="button"
-          className="btn btn-ghost btn-sm"
+          className="btn btn-primary btn-sm"
           onClick={() => setStatus('idle')}
         >
           Submit another request

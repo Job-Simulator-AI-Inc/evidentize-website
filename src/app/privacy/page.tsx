@@ -150,7 +150,7 @@ export default function PrivacyPage() {
                   <li><strong>Objection</strong> — object to processing based on legitimate interests</li>
                   <li><strong>Restriction</strong> — request that processing be restricted while a complaint is resolved</li>
                 </ul>
-                <p>To exercise any of these rights, email <a href="mailto:privacy@evidentize.io" className="legal-link">privacy@evidentize.io</a>. We will respond within 30 days.</p>
+                <p>To exercise any of these rights, email <a href="mailto:hello@evidentize.io" className="legal-link">hello@evidentize.io</a>. We will respond within 30 days.</p>
                 <p>If you believe we have not handled your data lawfully, you have the right to lodge a complaint with the <a href="https://ico.org.uk" className="legal-link" target="_blank" rel="noopener noreferrer">Information Commissioner&apos;s Office (ICO)</a>.</p>
               </section>
 
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
                 <h2 className="legal-section-heading">9. Contact</h2>
                 <p>For privacy-related questions, data subject requests, or to report a concern:</p>
                 <div className="legal-callout">
-                  <p><strong>Email:</strong> <a href="mailto:privacy@evidentize.io" className="legal-link">privacy@evidentize.io</a></p>
+                  <p><strong>Email:</strong> <a href="mailto:hello@evidentize.io" className="legal-link">hello@evidentize.io</a></p>
                   <p><strong>Post:</strong> Evidentize Ltd, London, United Kingdom</p>
                 </div>
                 <p>We may update this policy from time to time. Where changes are material, we will notify partners by email and post a notice on this page. The &ldquo;last updated&rdquo; date at the top of this page will always reflect the current version.</p>

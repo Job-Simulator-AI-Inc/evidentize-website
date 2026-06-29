@@ -40,7 +40,7 @@ const JOB_LISTINGS: JobListing[] = [
   //   ],
   //   skills: ['TypeScript', 'Node.js', 'PostgreSQL', 'System Design'],
   //   salaryRange: '£70,000 – £90,000',
-  //   applyEmail: 'careers@evidentize.io',
+  //   applyEmail: 'hello@evidentize.io',
   // },
 ]
 
@@ -156,7 +156,7 @@ export default function CareersPage() {
                           <span className="career-card-salary-value">{job.salaryRange}</span>
                         </div>
                         <a
-                          href={`mailto:${job.applyEmail ?? 'careers@evidentize.io'}?subject=Application — ${job.title}`}
+                          href={`mailto:${job.applyEmail ?? 'hello@evidentize.io'}?subject=Application — ${job.title}`}
                           className="career-apply-btn"
                         >
                           Apply for this role
@@ -238,7 +238,7 @@ export default function CareersPage() {
                 Send us a note introducing yourself — what you have worked on, why the problem interests you, and what you would want to work on at Evidentize.
               </p>
               <div className="solution-cta-btns">
-                <Button href="mailto:careers@evidentize.io" variant="primary" arrow>
+                <Button href="mailto:hello@evidentize.io" variant="primary" arrow>
                   Get in touch
                 </Button>
                 <Button href="/about" variant="ghost">

@@ -83,8 +83,8 @@ export default function InvestorsPage() {
                   <p className="investor-contact-body">
                     If you are interested in learning more about Evidentize — the product, the model, the market opportunity or the current stage — please reach out by email. We do not have an investor portal or a deck request form. We have a conversation.
                   </p>
-                  <a href="mailto:investors@evidentize.io" className="investor-email">
-                    investors@evidentize.io
+                  <a href="mailto:hello@evidentize.io" className="investor-email">
+                    hello@evidentize.io
                   </a>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function InvestorsPage() {
                 Reach out directly. We respond to all investor enquiries and are happy to talk about what we are building, where we are and where we are going.
               </p>
               <div className="solution-cta-btns">
-                <Button href="mailto:investors@evidentize.io" variant="primary" arrow>
+                <Button href="mailto:hello@evidentize.io" variant="primary" arrow>
                   Get in touch
                 </Button>
                 <Button href="/about" variant="ghost">
